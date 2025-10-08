@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -30,6 +31,33 @@
             </nav>
         </div>
     </header>
+   <section class="mobile-menu">
+  <div class="menu-header">
+    <div class="logo">
+      <span>TechSphere Pro</span>
+    </div>
+    <button onclick="openRightMenu()" class="menu-btn">&#9776;</button>
+  </div>
+
+  <div id="rightMenu" class="right-menu">
+    <button onclick="closeRightMenu()" class="close-btn">&times;</button>
+    <ul class="menu-list">
+      <li><a href="#">Products <ion-icon name="chevron-down-outline"></ion-icon></a></li>
+      <li><a href="#">Work <ion-icon name="chevron-down-outline"></ion-icon></a></li>
+      <li><a href="#">Education <ion-icon name="chevron-down-outline"></ion-icon></a></li>
+      <li><a href="#">Pricing <ion-icon name="chevron-down-outline"></ion-icon></a></li>
+      <li><a href="#">Resource <ion-icon name="chevron-down-outline"></ion-icon></a></li>
+      <li><a href="#">Free Tools <ion-icon name="chevron-down-outline"></ion-icon></a></li>
+    </ul>
+
+    <div class="menu-footer">
+      <a href="#"><b>Contact Sales</b></a>
+      <a href="#"><b>Log in</b></a>
+      <a href="#" class="cta-btn"><b>Get Grammarly</b> It’s free</a>
+    </div>
+  </div>
+</section>
+
     <section class="hero-1">
         <div class="hero-section">
             <div class="hero-section-inner">
@@ -293,6 +321,18 @@
         </div>
 </div>
     </footer>
+
+    <script>
+          const rightMenu = document.getElementById("rightMenu");
+
+    function openRightMenu() {
+      rightMenu.classList.remove("translate-x-full");
+    }
+
+    function closeRightMenu() {
+      rightMenu.classList.add("translate-x-full");
+    }
+    </script>
 </body>
 
 </html>
